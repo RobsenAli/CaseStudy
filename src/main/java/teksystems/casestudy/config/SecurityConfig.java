@@ -24,26 +24,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/pub/**","/product/** "," /error/**", "/login/**", "/index").permitAll()
+            .csrf().disable()
+            .authorizeRequests()
+                .antMatchers("/pub/**", "/error/**", "/login/**", "/index").permitAll()
                 .antMatchers("/admin/**", "/cart/**", "/user/**").authenticated()
                 .and()
-                .formLogin()
+            .formLogin()
                 // this is the URL of the login page
-                .loginPage("/login/login")
+                .loginPage("/login")
                 // this is the URL where the login page will submit
                 .loginProcessingUrl("/login/loginSubmit")
                 .defaultSuccessUrl("/index")
                 .and()
-                .logout()
+            .logout()
                 .invalidateHttpSession(true)
                 // this is the URL to log the user out
                 .logoutUrl("/login/logout")
                 // the URL that the user goes to after they logout
                 .logoutSuccessUrl("/index")
                 .and()
-                .exceptionHandling()
+            .exceptionHandling()
                 .accessDeniedPage("/error/404");
     }
 

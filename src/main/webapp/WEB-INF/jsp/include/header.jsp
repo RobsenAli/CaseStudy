@@ -18,20 +18,23 @@
             font-size: 20px;
             margin: 0px 5px 0px 5px;
             padding: 0px 0px 0px 10px;
+            color: white;
         }
 
         #navBar {
             padding: 20px;
-            background-color: black;
+            background-color: #c4e1e7;
             font-size: large;
         }
 
         #siteHeader {
             float: left;
         }
-        body{
+
+        body {
             background-color: black;
         }
+
 
         /*#login {*/
         /*    float: right;*/
@@ -42,18 +45,17 @@
     </style>
     <nav>
         <div id="navBar"><a href="/index">Home</a> &nbsp; | &nbsp; <a href="/product/all">Shop Classes</a> &nbsp; | &nbsp;
-            &nbsp; | &nbsp; <a href="/product/search">Search Classes</a> &nbsp; | &nbsp; <a href="/cart/check-out/">My Classes</a>
-            <a href="/index"><h2 id="siteHeader"> Rob's Muscle Gym&#129728;
-
+            &nbsp; | &nbsp; <a href="/product/search">Search Shop</a> &nbsp; | &nbsp; <a href="/cart/check-out/">My Cart</a>
+            <a href="/index"><h2 id="siteHeader"> Rob's Muscle Gym &#129728;
                 &nbsp; | &nbsp;
             </h2></a></div>
 
         <div id="authBar"><sec:authorize access="!isAuthenticated()">
-            <a id="login"
+            <a id="/login"
                href="/login">Login</a>&nbsp; | &nbsp;<a id="login" href="/register/registerForm">Register</a>
         </sec:authorize>
             <sec:authorize access="isAuthenticated()">
-                <span id="welcome">Lets Run, <sec:authentication property="principal.username"/></span>
+                <span id="welcome">Lets Work, <sec:authentication property="principal.username"/></span>
                 <span>&nbsp</span>
                 <a id="navLogout" href="/login/logout">Logout</a> <a id="navAccount" href="/user/accountEditForm">Account</a>
             </sec:authorize>

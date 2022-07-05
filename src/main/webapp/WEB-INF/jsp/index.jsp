@@ -22,7 +22,7 @@
                  style="width: 600px; display: block; margin-left: auto; margin-right: auto" />
             <br>
             <div style="color: white">
-            <h2 style="text-align: center" >The world trusts us to deliver SPEEDY service for athletes all over the world </h2>
+            <h2 style="text-align: center" >A GYM THAT IS THERE FOR ALL YOUR HEALTH AND AESTHETIC NEEDS</h2>
             <br>
             <h3 style="text-align: center; color: white" >Find your strength!</h3>
             </div>
