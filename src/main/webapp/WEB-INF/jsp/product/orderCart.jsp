@@ -11,6 +11,7 @@
             text-align: center;
             position: relative;
             top: 10px;
+            color: white;
         }
 
         h5 {
@@ -18,6 +19,7 @@
             position: relative;
             top: 10px;
             font-size: x-large;
+            color: white;
 
         }
 
@@ -26,12 +28,14 @@
             border-collapse: collapse;
             margin-left: auto;
             margin-right: auto;
+            color: white;
 
         }
 
         th, td {
             padding: 5px;
             text-align: left;
+            color: white;
         }
 
         body {
@@ -73,7 +77,7 @@
     </style>
 </head>
 
-<h2 style="margin-top: -20px; text-align: center">Cart</h2>
+<h2 style="margin-top: -20px; text-align: center; color: white">Cart</h2>
 
 <table  style=" margin-left: auto; margin-right: auto;table-layout: auto;width: 60%; margin-top: -5px" class="table">
     <tr scope="row">

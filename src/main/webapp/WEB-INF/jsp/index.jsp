@@ -8,7 +8,6 @@
         }
         h1{
             margin-left: 100px;
-            font-family: SansSerif;
         }
 
 

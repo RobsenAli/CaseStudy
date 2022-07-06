@@ -2,19 +2,15 @@ package teksystems.casestudy.database.dao;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.ActiveProfiles;
 import teksystems.casestudy.database.entity.Order;
 import teksystems.casestudy.database.entity.User;
 
 import java.util.Date;
 import java.util.HashSet;
-
-import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
 @Slf4j
 @ActiveProfiles({"test", "default"})
@@ -31,7 +27,6 @@ class OrderDAOTest {
     private UserDAO userDAO;
 
 
-
     @Test
     void findUserAndStatus() {
 
@@ -39,10 +34,10 @@ class OrderDAOTest {
         // dummy user
         User user = new User();
         user.setId(1);
-        user.setFirstName("obsa");
+        user.setFirstName("robsen");
         user.setLastName("ali");
-        user.setEmail("obsa@me.com");
-        user.setPassword("123");
+        user.setEmail("test@yahoo.com");
+        user.setPassword("12345");
         user.setCreateDate(new Date());
 
         userDAO.save(user);
@@ -53,7 +48,7 @@ class OrderDAOTest {
         order.setId(1);
         order.setUser(user);
         order.setOrderDate(new Date());
-        order.setShippingAddress("1234 th ave");
+        order.setShippingAddress("1234 4th ave");
         order.setStatus("pending");
         order.setCreditCard("122334344243");
         order.setOrderProducts(new HashSet<>());
@@ -65,6 +60,6 @@ class OrderDAOTest {
         Assertions.assertEquals(orderDAO.findByUserAndStatus(user, order.getStatus()).getId(), order.getId());
 
     }
-
-
 }
+
+

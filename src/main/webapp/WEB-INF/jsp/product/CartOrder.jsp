@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fashionably Late Running Store</title>
+    <title style="color: white">Robs Muscle Gym</title>
 </head>
 <body>
 
